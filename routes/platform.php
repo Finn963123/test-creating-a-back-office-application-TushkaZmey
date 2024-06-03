@@ -20,7 +20,6 @@ use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
 use App\Orchid\Screens\EmailSenderScreen;
-
 /*
 |--------------------------------------------------------------------------
 | Dashboard Routes

@@ -6,60 +6,53 @@ use Orchid\Screen\Screen;
 
 class EmailSenderScreen extends Screen
 {
-    /**
-     * Fetch data to be displayed on the screen.
-     *
-     * @return array
-     */
-    public function query(): iterable
+     /**
+       * Метод, определяющий все входные данные экрана. 
+       * Именно в нём должны вызываться запросы к базе данных,
+       * api или любые другие (не обязательно явно),
+       * результатом которого должен быть массив, 
+       * обращение к которым будут использоваться его ключи.
+       */
+    public function query(): array
     {
         return [];
     }
 
     /**
-     * The name of the screen displayed in the header.
-     *
-     * @return string|null
+     * Имя отображается на экране пользователя и в заголовках
      */
     public function name(): ?string
     {
-        return 'EmailSenderScreen';
+        return "Почтовый ящик";
     }
 
     /**
-     * The screen's action buttons.
-     *
-     * @return \Orchid\Screen\Action[]
+     * Описание отображается на экране пользователя и в заголовках
      */
-    public function commandBar(): iterable
+    public function description(): ?string
+    {
+        return "Напиши в меня";
+    }
+    
+     /**
+       * Определяет управляющие кнопки и события,
+       * которые должны будут произойти по нажатию
+       */
+    public function commandBar(): array
     {
         return [];
     }
 
     /**
-     * The screen's layout elements.
-     *
-     * @return \Orchid\Screen\Layout[]|string[]
-     */
-    public function layout(): iterable
+      * Набор отображений 
+      * строк, таблиц, графиков,
+      * модальных окон и их комбинации.
+      */
+    public function layout(): array
     {
         return [];
     }
+    
 }
 
-/**
- * The name is displayed on the user's screen and in the headers
- */
-public function name(): ?string
-{
-    return "Email sender";
-}
-
-/**
- * The description is displayed on the user's screen under the heading
- */
-public function description(): ?string
-{
-    return "Tool that sends ad-hoc email messages.";
-}
 
